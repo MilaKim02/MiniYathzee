@@ -40,7 +40,7 @@ export default Gameboard = ({ navigation, route }) => {
 
   //this useeffect is for handling the gameflow so that the game
 //does not stop too early or doea not continue after it should not
-//trigger here (in teacher solution) is nbrofthrowsLeft. Another reason for putting the nbrofthrowsLeft
+//trigger here (in teacher solution) is nbrofthrowsLeft. Another 
 
   useEffect(() => {
     if (playerName === '' && route.params?.player) {
@@ -76,7 +76,7 @@ export default Gameboard = ({ navigation, route }) => {
     pointsRow.push(
       <Col key={'pointsRow' + spot}>
         <Text key={'pointsRow' + spot}>
-          {getSpotTotal(spot)}
+        {getSpotTotal(spot)}
         </Text>
       </Col>
     )
@@ -86,8 +86,8 @@ export default Gameboard = ({ navigation, route }) => {
   for (let diceButton = 0; diceButton < MAX_SPOT; diceButton++) {
     pointsToSelectRow.push(
       <Col key={'buttonsRow' + diceButton}>
-        <Pressable 
-        key={'buttonsRow' + diceButton}
+        <Pressable
+         key={'buttonsRow' + diceButton}
           onPress={() => selectDicePoints(diceButton)}
         >
           <MaterialCommunityIcons
@@ -102,8 +102,7 @@ export default Gameboard = ({ navigation, route }) => {
     );
   }
 
- 
-const selectDice = (i) => {
+  const selectDice = (i) => {
     if (nbrOfThrowsLeft < NBR_OF_THROWS && !gameEndStatus) {
       let dices = [...selectedDices];
       dices[i] = selectedDices[i] ? false : true;
@@ -128,14 +127,12 @@ const selectDice = (i) => {
     points[i] = nbrOfDices * (i + 1);
     setDicePointsTotal(points);
     setSelectedDicePoints(selectedPoints);
-    setSelectedDices(selected);
     return points[i];
   }
 
   function getSpotTotal(i) {
     return dicePointsTotal[i];
   }
-
 
   const throwDices = () => {
     if (nbrOfThrowsLeft ===  0 && !gameEndStatus) {
@@ -147,6 +144,7 @@ const selectDice = (i) => {
       diceSpots.fill(0);
       dicePointsTotal.fill(0);
     }
+
 
     let spots = [...diceSpots];
     for (let i = 0; i < NBR_OF_DICES; i++) {
@@ -170,12 +168,17 @@ const selectDice = (i) => {
       return 'steelblue'
     }
   }
+ 
+
+
 
   return (
     <>
       <Header />
-      <View >
-        <Text >Gameboard </Text>
+      <View  style={styles.gameboard}>
+        <Text  style={styles.row} >Gameboard </Text>
+        <Text  style={styles.rowname}>Player: {playerName}</Text>
+        <Text style={styles.row}>{status}</Text>
         <Container fluid>
           <Row>{dicesRow}</Row>
         </Container>
@@ -185,12 +188,12 @@ const selectDice = (i) => {
         <Container fluid>
           <Row>{pointsToSelectRow}</Row>
         </Container>
-        <Text>Throws Left: {nbrOfThrowsLeft}</Text>
+        <Text style={styles.row}>Throws Left: {nbrOfThrowsLeft}</Text>
         <Pressable
           onPress={() => throwDices()}>
-          <Text>THROW DICES</Text>
+          <Text  style={styles.throw}>THROW DICES</Text>
         </Pressable>
-        <Text>Player: {playerName}</Text>
+        
       </View>
       <Footer />
     </>

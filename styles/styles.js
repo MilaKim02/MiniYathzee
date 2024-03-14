@@ -35,7 +35,9 @@ export default StyleSheet.create({
   gameboard: {
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    margin: 15,
+    //padding: 15,
   },
   gameinfo: {
     backgroundColor: '#fff',
@@ -46,7 +48,17 @@ export default StyleSheet.create({
   },
   row: {
     marginTop: 20,
-    padding: 10
+    padding: 20
+  },
+  rowname: {
+    fontSize:20,
+    //marginTop: 10,
+    padding: 10,
+  },
+  throw: {
+fontSize:20,
+marginTop: 20,
+padding: 10
   },
   flex: {
     flexDirection: "row"
@@ -64,5 +76,35 @@ export default StyleSheet.create({
   buttonText: {
     color:"#2B2B52",
     fontSize: 20
-  }
+  },
+
+  playername: {
+    margin:20,
+    borderWidth: 1,
+    borderColor: 'black',
+    height:35,
+    marginLeft:15,
+  },
+  name: {
+    margin:20,
+  },
+  ok:{
+    marginLeft: 160,
+    marginTop:20,
+    borderWidth: 1,
+    borderColor: 'black',
+    width:90,
+    height: 30,
+    textAlign:'center',
+    fontSize:20,
+  },
+   rules: {
+    margin:20,
+   },
+   lucky:{
+    margin:20,
+    marginLeft: 130,
+    fontSize: 25,
+
+   }
 });

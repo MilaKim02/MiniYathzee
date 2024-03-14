@@ -32,19 +32,19 @@ export default function Home({ navigation }) {
             <View >
                 {!hasPlayerName ?
                     <>
-                        <Text>
+                        <Text style={styles.name}>
                             For scoreboard enter your name... </Text>
-                        <TextInput onChangeText={setPlayerName} autoFocus={true}></TextInput>
+                        <TextInput style={styles.playername} onChangeText={setPlayerName} autoFocus={true}></TextInput>
                         <Pressable
                             onPress={() => handlePlayerName(playerName)}>
-                            <Text>OK</Text>
+                            <Text style={styles.ok}>OK</Text>
                         </Pressable>
                     </>
                 
                 :
                 <>
-                    <Text>Rules of the game...</Text>
-                    <Text multiline='true'>
+                    <Text style={styles.rules}>Rules of the game...</Text>
+                    <Text style={styles.rules} multiline='true'>
                         THE GAME: Upper section of the classic Yahtzee
                         dice game. You have {NBR_OF_DICES} dices and
                         for the every dice you have {NBR_OF_THROWS}
@@ -55,12 +55,12 @@ export default function Home({ navigation }) {
                         Game ends when all points have been selected.
                         The order for selecting those is free.
                     </Text>
-                    <Text multiline='true'>Copy ore text here...</Text>
-                    <Text>Good luck, {playerName}</Text>
+                    <Text multiline='true'>Copy more text here...</Text>
+                    <Text style={styles.lucky}>Good luck, {playerName}</Text>
                     <Pressable
                         onPress={() => navigation.navigate(
                             'Gameboard', { player: playerName })}>
-                        <Text>PLAY</Text>
+                        <Text style={styles.ok}>PLAY</Text>
                     </Pressable>
                 </>
 }
