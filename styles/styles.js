@@ -47,8 +47,9 @@ export default StyleSheet.create({
     marginTop: 10
   },
   row: {
-    marginTop: 20,
-    padding: 20
+    marginTop: 10,
+    padding: 10,
+    fontSize:20,
   },
   rowname: {
     fontSize:20,
@@ -87,6 +88,7 @@ padding: 10
   },
   name: {
     margin:20,
+    fontSize:'20'
   },
   ok:{
     marginLeft: 160,

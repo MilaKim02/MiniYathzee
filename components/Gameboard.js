@@ -176,8 +176,12 @@ export default Gameboard = ({ navigation, route }) => {
     <>
       <Header />
       <View  style={styles.gameboard}>
-        <Text  style={styles.row} >Gameboard </Text>
+       <MaterialCommunityIcons
+       name='dice-multiple'
+       size='55'
+       color='steelblue'></MaterialCommunityIcons>
         <Text  style={styles.rowname}>Player: {playerName}</Text>
+        <Text style={styles.row}>Throws Left: {nbrOfThrowsLeft}</Text>
         <Text style={styles.row}>{status}</Text>
         <Container fluid>
           <Row>{dicesRow}</Row>
@@ -188,7 +192,7 @@ export default Gameboard = ({ navigation, route }) => {
         <Container fluid>
           <Row>{pointsToSelectRow}</Row>
         </Container>
-        <Text style={styles.row}>Throws Left: {nbrOfThrowsLeft}</Text>
+       
         <Pressable
           onPress={() => throwDices()}>
           <Text  style={styles.throw}>THROW DICES</Text>

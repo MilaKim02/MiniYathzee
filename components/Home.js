@@ -43,7 +43,7 @@ export default function Home({ navigation }) {
                 
                 :
                 <>
-                    <Text style={styles.rules}>Rules of the game...</Text>
+                    <Text style={styles.rules}>RULES OF THE GAME:</Text>
                     <Text style={styles.rules} multiline='true'>
                         THE GAME: Upper section of the classic Yahtzee
                         dice game. You have {NBR_OF_DICES} dices and
