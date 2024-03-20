@@ -4,6 +4,7 @@ import Scoreboard from './components/Scoreboard';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
+import { useFonts } from 'expo-font';
 
 //npm install @react-navigation/native
 //npx expo install react-native-screens react-native-safe-area-context
@@ -14,6 +15,10 @@ import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
+  const [loaded] = useFonts({
+    Simonetta: require('./fonts/Simonetta-Italic.ttf')
+  });
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -39,7 +44,7 @@ export default function App() {
             return <MaterialCommunityIcons
               name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: 'steelblue',
+          tabBarActiveTintColor: '#2D4B73',
           tabBarInactiveTintColor: 'gray',
         })}
       >

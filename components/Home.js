@@ -40,30 +40,37 @@ export default function Home({ navigation }) {
                             <Text style={styles.ok}>OK</Text>
                         </Pressable>
                     </>
-                
-                :
-                <>
-                    <Text style={styles.rules}>RULES OF THE GAME:</Text>
-                    <Text style={styles.rules} multiline='true'>
-                        THE GAME: Upper section of the classic Yahtzee
-                        dice game. You have {NBR_OF_DICES} dices and
-                        for the every dice you have {NBR_OF_THROWS}
-                        throws. After each throw you can keep dices in
-                        order to get same dice spot counts as many as
-                        possible. In the end of the turn you must select
-                        your points from {MIN_SPOT} to {MAX_SPOT}.
-                        Game ends when all points have been selected.
-                        The order for selecting those is free.
-                    </Text>
-                    <Text multiline='true'>Copy more text here...</Text>
-                    <Text style={styles.lucky}>Good luck, {playerName}</Text>
-                    <Pressable
-                        onPress={() => navigation.navigate(
-                            'Gameboard', { player: playerName })}>
-                        <Text style={styles.ok}>PLAY</Text>
-                    </Pressable>
-                </>
-}
+
+                    :
+                    <>
+                    <View style={styles.rulesicon}>
+                    <MaterialCommunityIcons 
+                    name='information'
+                    size='50'
+                    color='#D9B70D'></MaterialCommunityIcons>
+                        <Text style={styles.rulesTitle}>RULES OF THE GAME:</Text>
+                   
+                    </View>
+                        <Text style={styles.rules} multiline='true'>
+                            THE GAME: Upper section of the classic Yahtzee
+                            dice game. You have {NBR_OF_DICES} dices and
+                            for the every dice you have {NBR_OF_THROWS}
+                            throws. After each throw you can keep dices in
+                            order to get same dice spot counts as many as
+                            possible. In the end of the turn you must select
+                            your points from {MIN_SPOT} to {MAX_SPOT}.
+                            Game ends when all points have been selected.
+                            The order for selecting those is free.
+                        </Text>
+                        <Text multiline='true'>Copy more text here...</Text>
+                        <Text style={styles.lucky}>Good luck, {playerName}</Text>
+                        <Pressable
+                            onPress={() => navigation.navigate(
+                                'Gameboard', { player: playerName })}>
+                            <Text style={styles.ok}>PLAY</Text>
+                        </Pressable>
+                    </>
+                }
             </View>
             <Footer></Footer>
         </>

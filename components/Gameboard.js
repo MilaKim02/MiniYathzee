@@ -114,7 +114,7 @@ export default Gameboard = ({ navigation, route }) => {
   }
 
   function getDiceColor(i) {
-    return selectedDices[i] ? 'black' : 'steelblue';
+    return selectedDices[i] ? '#253C59' : '#D9B70D';
   }
 
   const selectDicePoints = (i) => {
@@ -162,10 +162,10 @@ export default Gameboard = ({ navigation, route }) => {
 
   function getDicePointsColor(i) {
     if (selectedDicePoints[i] && !gameEndStatus) {
-      return 'black';
+      return '#253C59';
     }
     else {
-      return 'steelblue'
+      return '#99B4BF'
     }
   }
  
@@ -179,12 +179,12 @@ export default Gameboard = ({ navigation, route }) => {
        <MaterialCommunityIcons
        name='dice-multiple'
        size='55'
-       color='steelblue'></MaterialCommunityIcons>
+       color='#D9B70D'></MaterialCommunityIcons>
         <Text  style={styles.rowname}>Player: {playerName}</Text>
         <Text style={styles.row}>Throws Left: {nbrOfThrowsLeft}</Text>
         <Text style={styles.row}>{status}</Text>
         <Container fluid>
-          <Row>{dicesRow}</Row>
+          <Row style={styles.dicesrow}>{dicesRow}</Row>
         </Container>
         <Container fluid>
           <Row>{pointsRow}</Row>

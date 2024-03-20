@@ -8,17 +8,25 @@ export default StyleSheet.create({
   header: {
     marginTop: 30,
     marginBottom: 15,
-    backgroundColor: 'skyblue',
+    backgroundColor: '#2D4B73',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconContainer: {
+    margin: 10,
+    marginTop: 25,
+
+
   },
   footer: {
     marginTop: 20,
-    backgroundColor: 'skyblue',
+    backgroundColor: '#2D4B73',
     flexDirection: 'row'
   },
   title: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontFamily: 'Simonetta',
     flex: 1,
     fontSize: 23,
     textAlign: 'center',
@@ -26,11 +34,12 @@ export default StyleSheet.create({
   },
   author: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontFamily: 'Simonetta',
+
     flex: 1,
     fontSize: 15,
     textAlign: 'center',
-    margin: 10,
+    margin: 20,
   },
   gameboard: {
     backgroundColor: '#fff',
@@ -49,17 +58,30 @@ export default StyleSheet.create({
   row: {
     marginTop: 10,
     padding: 10,
-    fontSize:20,
+    fontSize: 20,
   },
   rowname: {
-    fontSize:20,
+    fontSize: 20,
     //marginTop: 10,
     padding: 10,
   },
   throw: {
-fontSize:20,
-marginTop: 20,
-padding: 10
+    fontSize: 20,
+    marginTop: 70,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: 'black',
+    backgroundColor: '#99B4BF',
+    width: 160,
+    height: 50,
+    textAlign: 'center',
+    fontSize: 20,
+    borderRadius: 15,
+    overflow: 'hidden'
+
+
+
+
   },
   flex: {
     flexDirection: "row"
@@ -75,38 +97,56 @@ padding: 10
     alignItems: 'center'
   },
   buttonText: {
-    color:"#2B2B52",
+    color: "#2B2B52",
     fontSize: 20
   },
 
   playername: {
-    margin:20,
+    margin: 20,
     borderWidth: 1,
     borderColor: 'black',
-    height:35,
-    marginLeft:15,
+    height: 35,
+    marginLeft: 15,
   },
   name: {
-    margin:20,
-    fontSize:'20'
+    margin: 20,
+    fontSize: 20,
   },
-  ok:{
+  ok: {
     marginLeft: 160,
-    marginTop:20,
+    marginTop: 20,
     borderWidth: 1,
     borderColor: 'black',
-    width:90,
+    backgroundColor: '#99B4BF',
+    width: 90,
     height: 30,
-    textAlign:'center',
-    fontSize:20,
+    textAlign: 'center',
+    fontSize: 20,
+    borderRadius: 15,
+    overflow: 'hidden'
   },
-   rules: {
-    margin:20,
-   },
-   lucky:{
-    margin:20,
+  rules: {
+    margin: 20,
+ 
+  },
+  rulesTitle: {
+    margin: 20,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  rulesicon: {
+    margin: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  lucky: {
+    margin: 20,
     marginLeft: 130,
     fontSize: 25,
 
-   }
+  },
+  dicesrow: {
+    margin: 20,
+  }
 });
