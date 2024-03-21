@@ -16,8 +16,6 @@ export default StyleSheet.create({
   iconContainer: {
     margin: 10,
     marginTop: 25,
-
-
   },
   footer: {
     marginTop: 20,
@@ -35,7 +33,6 @@ export default StyleSheet.create({
   author: {
     color: '#fff',
     fontFamily: 'Simonetta',
-
     flex: 1,
     fontSize: 15,
     textAlign: 'center',
@@ -46,7 +43,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     margin: 15,
-    //padding: 15,
   },
   gameinfo: {
     backgroundColor: '#fff',
@@ -59,6 +55,12 @@ export default StyleSheet.create({
     marginTop: 10,
     padding: 10,
     fontSize: 20,
+  },
+  row1: {
+    marginTop: 10,
+    padding: 10,
+    fontSize: 30,
+    fontWeight: 'bold',
   },
   rowname: {
     fontSize: 20,
@@ -75,13 +77,8 @@ export default StyleSheet.create({
     width: 160,
     height: 50,
     textAlign: 'center',
-    fontSize: 20,
     borderRadius: 15,
     overflow: 'hidden'
-
-
-
-
   },
   flex: {
     flexDirection: "row"
@@ -126,8 +123,8 @@ export default StyleSheet.create({
     overflow: 'hidden'
   },
   rules: {
-    margin: 20,
- 
+    margin: 10,
+
   },
   rulesTitle: {
     margin: 20,
@@ -148,5 +145,9 @@ export default StyleSheet.create({
   },
   dicesrow: {
     margin: 20,
+  },
+  total: {
+    marginTop: 15,
+    fontSize: 30,
   }
 });

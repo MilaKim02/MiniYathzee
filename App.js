@@ -19,6 +19,11 @@ export default function App() {
   const [loaded] = useFonts({
     Simonetta: require('./fonts/Simonetta-Italic.ttf')
   });
+  if (!loaded) {
+    return null; 
+  }
+
+
   return (
     <NavigationContainer>
       <Tab.Navigator
